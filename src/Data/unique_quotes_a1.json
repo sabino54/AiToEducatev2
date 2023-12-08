@@ -1,0 +1,69 @@
+{
+    "source": "The New York Times",
+    "logo": "https://static01.nyt.com/images/icons/ios-ipad-144x144.png",
+    "headline": "Biden Calls on Congress to Approve Aid to Ukraine: \u2018This Cannot Wait\u2019",
+    "text": "President Biden called on congressional Republicans on Wednesday to put aside \u201cpetty, partisan, angry politics\u201d and pass a multibillion-dollar aid package for Ukraine, warning that failure to do so could enable President Vladimir V. Putin of Russia to reclaim momentum in the war and even draw in American troops.\n\nThe president said that he was willing to make \u201csignificant compromises\u201d on border security to satisfy Senate Republicans who have refused to support further Ukraine aid without a new crackdown on illegal immigration. But Mr. Biden complained that they have been unwilling to back off what he characterized as \u201cextreme\u201d demands.\n\nRepublicans have insisted on tying strict immigration measures to the aid, and blocked a spending package without such measures in a vote on Wednesday. Prospects for bipartisan consensus have faded, even as senators in both parties express support for Ukraine\u2019s efforts to defend itself against Russia.\n\n\u201cThis cannot wait,\u201d Mr. Biden said in a televised statement at the White House before the vote. \u201cCongress needs to pass supplemental funding for Ukraine before they break for the holiday recess. Simple as that. Frankly, I think it\u2019s stunning that we\u2019ve gotten to this point in the first place. Republicans in Congress are willing to give Putin the greatest gift he can hope for and abandon our global leadership.\u201d\n\nHe faulted Republicans for holding the Ukraine aid hostage to the border fight. \u201cRepublicans think they can get everything they want without any bipartisan compromise,\u201d Mr. Biden said. \u201cThat\u2019s not the answer. That\u2019s not the answer. And now they\u2019re willing to literally kneecap Ukraine on the battlefield and endanger our national security in the process.\u201d\n\nHe added: \u201cI\u2019m willing to make significant compromises on the border. We need to fix the broken border system. It is broken. And thus far I\u2019ve gotten no response.\u201d\n\nThe southern border has been a major liability for Mr. Biden, who has been unable to stem the tide of crossings. Large numbers of people have been surging toward the border each day, driven by historic migration across the hemisphere from Venezuela, Haiti, Honduras and other countries facing political instability, gang violence and natural disasters.\n\nRepublicans have accused Mr. Biden and the Democrats of trying to steamroll them on immigration by using the Ukraine aid as justification. Senator Tom Cotton, Republican of Arkansas got into a testy exchange with Senator Chuck Schumer of New York, the Democratic leader during Tuesday\u2019s meeting, and he later sent a fund-raising email to supporters declaring he would not back down.\n\n\u201cI will continue holding Schumer, and the rest of the Democrats, to account for their lies, incompetence, and unwillingness to secure our border,\u201d he wrote, saying that it was \u201cimportant that we stay on offense.\u201d\n\nThe Biden administration has already told Congress that money for Ukraine would run out by the end of the year, leaving the embattled former Soviet republic vulnerable to a new Russian offensive, although some Pentagon officials privately have said they could stretch the money out through the winter. The White House has asked for an additional $61 billion in aid as part of a $110 billion emergency spending package to be voted on Wednesday.\n\nThe Senate was supposed to be the easier place for the White House to win support since Republicans led by Senator Mitch McConnell of Kentucky by and large back American aid for Ukraine, as opposed to many of their House Republican counterparts. The White House had hoped a strong bipartisan vote in the Senate would pressure the newly installed House speaker, Mike Johnson, who has lately expressed support for Ukraine but previously voted against aid.\n\nMr. Biden made his remarks on Wednesday shortly after a video call with other leaders of the Group of 7 major industrial powers and framed the issue as a matter of American credibility and leadership on the world stage.\n\nWithout more aid for Ukraine, he warned, other allies may back off their own commitments. \u201cIf we walk away, how many of our European friends are going to continue to fund and at what rates are they going to continue to fund?\u201d he asked.\n\nThe president even raised the prospect that an emboldened Mr. Putin would pose a threat to NATO allies, requiring the United States to come to their assistance with troops on the group. \u201cIf Putin takes Ukraine, he won\u2019t stop there,\u201d Mr. Biden said. \u201cIt\u2019s important to see the long run here. He\u2019s going to keep going. He\u2019s made that pretty clear.\u201d\n\n\u201cIf he keeps going and then he attacks a NATO ally\u201d to which the United States is bound by treaty to help, \u201cthen we\u2019ll have something that we don\u2019t seek and that we don\u2019t have today \u2014 American troops fighting Russian troops,\u201d Mr. Biden said.\n\n\u201cMake no mistake,\u201d he added. \u201cToday\u2019s vote is going to be long remembered and history\u2019s going to judge harshly those who turn their back on freedom\u2019s cause. We can\u2019t let Putin win. I\u2019ll say it again, we can\u2019t let Putin win.\u201d",
+    "name": "article01_nyt.json",
+    "annotations": [
+        {
+            "technique": "Political polarisation",
+            "reasoning": "The quote attempts to increase political polarisation by portraying Republicans as obstructionists who are endangering national security.",
+            "quote": "Republicans in Congress are willing to give Putin the greatest gift he can hope for and abandon our global leadership.",
+            "rating": 4
+        },
+        {
+            "technique": "Political polarisation",
+            "reasoning": "The quote attempts to increase political polarisation by accusing Republicans of holding Ukraine aid hostage to their demands on border security.",
+            "quote": "He faulted Republicans for holding the Ukraine aid hostage to the border fight. \u201cRepublicans think they can get everything they want without any bipartisan compromise,\u201d Mr. Biden said. \u201cThat\u2019s not the answer. That\u2019s not the answer. And now they\u2019re willing to literally kneecap Ukraine on the battlefield and endanger our national security in the process.",
+            "rating": 4
+        },
+        {
+            "technique": "Political polarisation",
+            "reasoning": "The quote attempts to increase political polarisation by accusing Democrats of lies, incompetence, and unwillingness to secure the border.",
+            "quote": "I will continue holding Schumer, and the rest of the Democrats, to account for their lies, incompetence, and unwillingness to secure our border,\u201d he wrote, saying that it was \u201cimportant that we stay on offense.",
+            "rating": 4
+        },
+        {
+            "technique": "Political polarisation",
+            "reasoning": "The quote attempts to increase political polarisation by suggesting that those who vote against the aid package are turning their back on freedom.",
+            "quote": "Make no mistake,\u201d he added. \u201cToday\u2019s vote is going to be long remembered and history\u2019s going to judge harshly those who turn their back on freedom\u2019s cause. We can\u2019t let Putin win. I\u2019ll say it again, we can\u2019t let Putin win.",
+            "rating": 4
+        },
+        {
+            "technique": "scapegoating",
+            "reasoning": "The quote suggests that Republicans are to blame for the potential failure of the aid package for Ukraine, which could have serious consequences.",
+            "quote": "This cannot wait,\u201d Mr. Biden said in a televised statement at the White House before the vote. \u201cCongress needs to pass supplemental funding for Ukraine before they break for the holiday recess. Simple as that. Frankly, I think it\u2019s stunning that we\u2019ve gotten to this point in the first place. Republicans in Congress are willing to give Putin the greatest gift he can hope for and abandon our global leadership.",
+            "rating": 4
+        },
+        {
+            "technique": "Fear mongering",
+            "reasoning": "The quote uses fear of a potential war involving American troops to pressure for the passage of a multibillion-dollar aid package for Ukraine.",
+            "quote": "If Putin takes Ukraine, he won\u2019t stop there,\u201d Mr. Biden said. \u201cIt\u2019s important to see the long run here. He\u2019s going to keep going. He\u2019s made that pretty clear.",
+            "rating": 4
+        },
+        {
+            "technique": "False dichotomy",
+            "reasoning": "The quote presents a false dichotomy by suggesting that the only two options are either passing the aid package or enabling Putin to reclaim momentum in the war and potentially draw in American troops.",
+            "quote": "President Biden called on congressional Republicans on Wednesday to put aside \u201cpetty, partisan, angry politics\u201d and pass a multibillion-dollar aid package for Ukraine, warning that failure to do so could enable President Vladimir V. Putin of Russia to reclaim momentum in the war and even draw in American troops.",
+            "rating": 4
+        },
+        {
+            "technique": "False dichotomy",
+            "reasoning": "The quote presents a false dichotomy by suggesting that Republicans either get everything they want without compromise or they are willing to harm Ukraine and endanger national security.",
+            "quote": "Republicans think they can get everything they want without any bipartisan compromise,\u201d Mr. Biden said. \u201cThat\u2019s not the answer. That\u2019s not the answer. And now they\u2019re willing to literally kneecap Ukraine on the battlefield and endanger our national security in the process.",
+            "rating": 5
+        },
+        {
+            "technique": "Ad Hominem",
+            "reasoning": "The quote attacks the Democrats' character and intentions instead of addressing their argument.",
+            "quote": "I will continue holding Schumer, and the rest of the Democrats, to account for their lies, incompetence, and unwillingness to secure our border,",
+            "rating": 4
+        },
+        {
+            "technique": "Emotion",
+            "reasoning": "The quote appeals to the sense of national security and the potential danger of not supporting Ukraine.",
+            "quote": "And now they\u2019re willing to literally kneecap Ukraine on the battlefield and endanger our national security in the process.",
+            "rating": 4
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "source": "Daily Kos",
+    "logo": "https://store.dailykos.com/cdn/shop/files/koslogo_1084x.png",
+    "headline": "Team Biden: Feeling lukewarm on the economy? Just wait until Republicans strip your health insurance",
+    "text": "The Biden campaign wants voters who may feel lukewarm on the economy to know they have a choice next year: They can opt for MAGAnomics and lose their health insurance.\n\nOn Tuesday, President Joe Biden's 2024 reelection campaign Twitter account, Biden-Harris HQ, tweeted out a brief clip of former Democratic New York state Sen. David Carlucci telling Fox News viewers what a second Donald Trump administration would mean for them.\n\n\u201cRight now, we have the largest number of Americans covered under health insurance,\u201c Carlucci said. \u201cTrump wants to repeal the ACA and leave millions of Americans without health insurance. Those are just some of the plain facts about what MAGAnomics means.\u201c The national uninsured rate reached an all-time low of 7.7% in early 2023 after a record-breaking 16 million Americans enrolled in the Affordable Care Act in 2022, according to the Department of Health and Human Services.\n\nYet out of nowhere a couple weeks ago, Trump decided to re-up the Republican Party's wildly unpopular and unsuccessful decade-long effort to repeal Obamacare and all the goodies that come with it, including protections for people with preexisting conditions.\n\nTrump has since sought to make his proposal for scrapping the ACA more enticing by promising the best health care ever under a new Trump regime.\n\n\u201cI don\u2019t want to terminate Obamacare, I want to REPLACE IT with MUCH BETTER HEALTHCARE. Obamacare Sucks!!!\u201d Trump posted on his Truth Social site last week.\n\nOh, and Trump is also going to build the wall, deliver on his infrastructure-y pledges, and hire only \u201cthe best\u201c people, as demonstrated by Rudy Giuliani, the deputy he tapped to lead his legal challenge to American democracy, and the crack team at Four Seasons Total Landscaping.\n\nProtecting the ACA, informally known as Obamacare, from Republican pledges to end it became a galvanizing issue nationwide in the 2018 midterms, playing a significant role in helping Democrats reclaim the House majority.\n\nTrump's insistence on revisiting the issue gives Democrats another bite at the apple nationwide, but could also specifically boost Biden in a battleground state like North Carolina, where 600,000 residents became insured on Dec. 1 through the ACA's Medicaid expansion.\n\nIn interviews this week, Democratic Gov. Roy Cooper credited the federal government's $1.8 billion expansion bonus with being an offer that even state Republicans couldn't refuse.\n\n\u201cLet me tell you something,\u201c Cooper said on MSNBC, \u201cthe signing bonus that the Biden administration gave to states that would expand Medicaid was significant in allowing North Carolina to convince a Republican legislature to give insurance to 600,000 more working North Carolinians.\u201c\n\nCooper also pointed out that Trump won North Carolina by just 1.4 points in 2020\u2014Biden's slimmest loss margin of the cycle.\n\n\u201cSo we plan to win North Carolina for Joe Biden in 2024,\u201c Cooper said.\n\nBy putting newly acquired health coverage on the chopping block for more than half a million Tar Heel state voters, Trump handed Team Biden a prime campaign issue. The Biden campaign clearly knows it, and is working to make sure voters view 2024 as a choice election. In this case, that choice is between having health care, Biden, or being stripped of it, Trump.\n\nCertainly the Biden campaign will be highlighting a series of choices for voters over the course of next year. But for now, North Carolina is ripe for the message that the White House and Cooper spent the week delivering.",
+    "name": "article04_dk.json",
+    "annotations": [
+        {
+            "technique": "politicalPolarisation",
+            "reasoning": "The quote attempts to polarize the political landscape by portraying one side as harmful to the public's health insurance.",
+            "quote": "They can opt for MAGAnomics and lose their health insurance.",
+            "rating": 4
+        },
+        {
+            "technique": "politicalPolarisation",
+            "reasoning": "The quote attempts to polarize the political landscape by portraying one side as having a negative impact on the health insurance of millions of Americans.",
+            "quote": "Trump wants to repeal the ACA and leave millions of Americans without health insurance. Those are just some of the plain facts about what MAGAnomics means.",
+            "rating": 4
+        },
+        {
+            "technique": "politicalPolarisation",
+            "reasoning": "The quote attempts to polarize the political landscape by portraying one side as having a negative impact on the health insurance of millions of Americans.",
+            "quote": "Yet out of nowhere a couple weeks ago, Trump decided to re-up the Republican Party's wildly unpopular and unsuccessful decade-long effort to repeal Obamacare and all the goodies that come with it, including protections for people with preexisting conditions.",
+            "rating": 4
+        },
+        {
+            "technique": "politicalPolarisation",
+            "reasoning": "The quote attempts to polarize the political landscape by portraying one side as having a negative impact on the health insurance of millions of Americans.",
+            "quote": "In this case, that choice is between having health care (Biden) or being stripped of it (Trump).",
+            "rating": 4
+        },
+        {
+            "technique": "nonSequitur",
+            "reasoning": "The statement about Trump building the wall, delivering on infrastructure pledges, and hiring \"the best\" people does not logically follow from the previous discussion about health insurance and the ACA.",
+            "quote": "Oh, and Trump is also going to build the wall, deliver on his infrastructure-y pledges, and hire only \u201cthe best\u201c people, as demonstrated by Rudy Giuliani, the deputy he tapped to lead his legal challenge to American democracy, and the crack team at Four Seasons Total Landscaping.",
+            "rating": 4
+        },
+        {
+            "technique": "scapegoating",
+            "reasoning": "The quote is blaming Trump for the potential loss of health insurance for millions of Americans.",
+            "quote": "Right now, we have the largest number of Americans covered under health insurance,\u201c Carlucci said. \u201cTrump wants to repeal the ACA and leave millions of Americans without health insurance. Those are just some of the plain facts about what MAGAnomics means.",
+            "rating": 4
+        },
+        {
+            "technique": "fearMongering",
+            "reasoning": "The quote is using fear mongering by suggesting that Trump's plans will put people's health coverage at risk.",
+            "quote": "By putting newly acquired health coverage on the chopping block for more than half a million Tar Heel state voters, Trump handed Team Biden a prime campaign issue. The Biden campaign clearly knows it, and is working to make sure voters view 2024 as a choice election. In this case, that choice is between having health care, Biden, or being stripped of it, Trump",
+            "rating": 4
+        },
+        {
+            "technique": "falseDichotomy",
+            "reasoning": "The quote presents the choice as either supporting MAGAnomics and losing health insurance, ignoring the possibility of other economic policies or reforms that could also support health insurance.",
+            "quote": "The Biden campaign wants voters who may feel lukewarm on the economy to know they have a choice next year: They can opt for MAGAnomics and lose their health insurance.",
+            "rating": 4
+        },
+        {
+            "technique": "emotion",
+            "reasoning": "The quote appeals to the fear of losing the benefits of Obamacare and the uncertainty of what Trump's proposed healthcare would look like.",
+            "quote": "I don\u2019t want to terminate Obamacare, I want to REPLACE IT with MUCH BETTER HEALTHCARE. Obamacare Sucks!!!\u201d Trump posted on his Truth Social site last week",
+            "rating": 4
+        }
+    ]
+}
