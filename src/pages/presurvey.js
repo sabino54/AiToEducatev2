@@ -74,7 +74,7 @@ const PreSurvey = ( { answers, setAnswers, navigateTo } ) => {
   return (
     <div style={styles.articleContainer}>
       <h1>Pre-Survey</h1>
-      <p>Please rate the following statements on a scale from 1 being not true at all to 5 being very true.</p>
+      <p>Please rate the following statements using the specific options provided for each. </p>
       {questions.map((question) => (
         <div key={question.id}>
           <div style={{margin: 12}}>{question.questionText}</div>
@@ -96,12 +96,6 @@ const PreSurvey = ( { answers, setAnswers, navigateTo } ) => {
           </form>
         </div>
       ))}
-      <div>
-        {Object.entries(answers).map(([questionId, answer]) => (
-          <p key={questionId}>Question {questionId} Answer: {answer}</p>
-        ))}
-      </div>
-
       <div style={styles.buttonContainer}>
           <button style={styles.button} onClick={() => navigateTo('consentForm')}>Previous</button>    
           <button style={buttonStyles} onClick={() => navigateTo('instructions')} disabled={!isComplete}>Next</button>   

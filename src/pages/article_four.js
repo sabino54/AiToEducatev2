@@ -1,14 +1,44 @@
 import React, { useState, useEffect } from "react";
-import article4URL from '../Data/article4.txt'; 
 import Highlighter from "react-highlight-words";
 import 'react-tippy/dist/tippy.css';
 import { questions } from "../Data/articlequestions";
-import RenderHighlight from "../Data/renderhighlight"; 
+import RenderHighlight from "../Data/renderhighlight";
+import articleJSON from "../Data/unique_quotes_a4.json"
 
-const highlights = ["The overall statewide shelter population is 23,000 people; about half are children."];
+const createQuoteReasoningMap = (annotations) => {
+  const map = {};
+  annotations.forEach(annotation => {
+    const normalizedQuote = annotation.quote.trim(); // Normalize the quote
+    map[normalizedQuote] = {
+      reasoning: annotation.reasoning,
+      technique: annotation.technique,
+      rating: annotation.rating
+    };
+  });
+  return map;
+};
+
+
+  
 
 const Article_four = ({ answers, setAnswers, navigateTo }) => {
-  const [articleContent, setArticleContent] = useState("");
+
+  const quoteReasoningMap = createQuoteReasoningMap(articleJSON.annotations);
+
+  const getTooltipText = (quote) => {
+    const annotation = quoteReasoningMap[quote];
+    console.log(quote)
+    console.log(annotation)
+
+    if (!annotation) {
+      return { title: "No techniques provided", content: "No reasoning provided" };
+    }
+    const title = annotation.technique;
+    const content = annotation.reasoning;
+    return { title, content };
+  };
+  
+  
   const [isComplete, setIsComplete] = useState(false);
 
   const handleOptionChange = (questionId, answer) => {
@@ -28,14 +58,6 @@ const Article_four = ({ answers, setAnswers, navigateTo }) => {
     setIsComplete(allAnswered);
   }, [answers, questions]);
 
-
-    useEffect(() => {
-        // Fetch the content of the text file
-        fetch(article4URL)
-            .then(response => response.text())
-            .then(text => setArticleContent(text))
-            .catch(error => console.error('Error fetching text file:', error));
-    }, []);
 
     const renderQuestion = (question) => (
       <div key={question.id} style={{margin: 10}}>
@@ -61,16 +83,30 @@ const Article_four = ({ answers, setAnswers, navigateTo }) => {
 
   return (
     <div style={styles.articleContainer}>
-        <div style={{ marginBottom: '60px' }}> 
-            <p style={styles.articleTitle}>Article 4</p>
-            <Highlighter
-                highlightClassName="YourHighlightClass"
-                searchWords={highlights}
-                autoEscape={true}
-                textToHighlight={articleContent}
-                highlightTag={(props) => <RenderHighlight tooltipText="Custom Tooltip Text" {...props} />}
-                style={styles.preformattedStyle}
-            />
+        <div style={{ marginBottom: '60px' }}>
+        <img src={articleJSON.logo} style={{marginTop: 37, marginLeft: "20%", width: "50%", height: "auto"}}/> 
+        <p style={{...styles.articleTitle, marginLeft:"25%"}}> Source: {articleJSON.source}</p>
+        <p style={styles.articleTitle}>{articleJSON.headline}</p>
+        <Highlighter
+          highlightClassName="YourHighlightClass"
+          searchWords={Object.keys(quoteReasoningMap)}
+          autoEscape={true}
+          textToHighlight={articleJSON.text}
+          highlightTag={({ children, highlightIndex }) => {
+            const quote = children.toString();
+            console.log(quote)
+            const tooltipData = getTooltipText(quote);
+            return (
+              <RenderHighlight 
+                tooltipTitle={tooltipData.title}
+                tooltipText={tooltipData.content}
+              >
+                {children}
+              </RenderHighlight>
+            );
+          }}          
+          style={styles.preformattedStyle}
+        />
         </div> 
         {questions.map(renderQuestion)}
         <div style={styles.buttonContainer}>
@@ -84,6 +120,7 @@ const Article_four = ({ answers, setAnswers, navigateTo }) => {
         </div>
     </div>
 );
+
 };
 
 const styles = {
@@ -93,23 +130,23 @@ const styles = {
         lineHeight: 1.4,
     },
     articleContainer: {
-        marginRight: 180,
-        marginLeft: 180,
+        marginRight: "25%",
+        marginLeft: "25%",
         paddingBottom: 10,
-        marginBottom: 80,
         display: 'flex', // Added for flex layout
         flexDirection: 'column', // Stack items vertically
         justifyContent: 'space-between', // Space between items
-        //backgroundColor: 'red',
+
     },
     articleTitle: {
-        fontSize: 18,
+        fontSize: 34,
         fontWeight: 'bold',
-        marginBottom: 5,
+        marginBottom: 10,
         fontFamily: 'Arial',
-        marginTop: 200,
+        marginTop: 25,
     },
     buttonContainer: {
+
         alignSelf: 'center', // Align button to the right
     },
     button: {

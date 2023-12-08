@@ -32,14 +32,11 @@ const HomePage = ( { consentChecked, setConsentChecked, navigateTo } ) => {
       <h2>Time Involvement:</h2>
       <p>Your participation in this experiment will take around 20-30 minutes.</p>
       
-      <h2>Payment:</h2>
-      <p>If recruitment materials indicate payment (e.g., Prolific or other recruitment), you will receive compensation as indicated.</p>
-      
       <h2>Subject's Rights:</h2>
       <p>If you have read this notice and have decided to participate in this project, please understand your participation is voluntary and you have the right to withdraw your consent or discontinue participation at any time without penalty or loss of benefits to which you are otherwise entitled. You have the right to refuse to answer particular questions. Your individual privacy will be maintained in all published and written data resulting from the study.</p>
       
       <h2>Contact Information:</h2>
-      <p>If you have any questions, concerns or complaints about this research study, its procedures, or risks and benefits, you should ask the Protocol Director, (XXXXX, Phone: (XXX) XXX-XXXX; Email: XXX@stanford.edu).</p>
+      <p>If you have any questions, concerns or complaints about this research study, its procedures, or risks and benefits, you should ask the Sabino Hernandez; Email: sabino54@stanford.edu.</p>
       
       <h2>Independent Contact:</h2>
       <p>If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, please contact the Stanford Institutional Review Board (IRB)...</p>

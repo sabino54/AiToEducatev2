@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ArticleOne from "./pages/article_one";
 import ConsentForm from './pages/consentForm';
 import ArticleTwo from "./pages/article_two";

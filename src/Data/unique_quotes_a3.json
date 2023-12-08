@@ -1,0 +1,75 @@
+{
+    "source": "The Wall Street Journal",
+    "logo": "https://www.wsj.com/apple-touch-icon.png",
+    "headline": "GOP Sees Skulduggery in Hunter Biden Paying His Father Back for Truck",
+    "text": "WASHINGTON\u2014Hunter Biden paid his father, Joe Biden, three installments totaling a little more than $4,000 in 2018 from a business account that held funds from his Chinese business dealings, according to documents released by the House Committee on Oversight and Accountability. \n\nWhile House Republicans said the money transfers link President Biden, who wasn\u2019t in office at the time, to his son\u2019s business activity in China, Democrats said they merely showed Hunter Biden reimbursing his father for some payments his father was making on a 2018 Ford F-150 Raptor that Hunter Biden was using. \n\nThe committee\u2019s chairman, Rep. James Comer (R., Ky,) said the payments \u201care now part of a pattern revealing Joe Biden knew about, participated in, and benefited from his family\u2019s influence peddling schemes.\u201d\n\nRep. Jamie Raskin (D., Md.), the ranking member of the committee, said they showed no such thing. \u201cAs a private citizen, Joe Biden made car payments for his son, who paid him back,\u201d Raskin said. \u201cIf Chairman Comer had any actual evidence of wrongdoing by President Biden, he would not repeatedly resort to distorting the facts.\u201d\n\nThe three payments at issue, for $1,380 each, occurred in September, October and November of 2018, after Joe Biden was vice president and before he was president, according to the documents released Monday.\n\nHunter Biden\u2019s lawyer, Abbe Lowell, said Comer was \u201creheating what is old as new to try to revive his sham of an investigation\u201d into the president and his family.\n\nIn those same autumn months five years ago, Hunter Biden bought a firearm in Delaware, a purchase now at the center of his federal prosecution on felony gun charges. Prosecutors have alleged that the younger Biden lied about his drug use on a federal form he was required to complete as part of that purchase. He has publicly said he struggled with addiction to crack cocaine and alcohol around that time.\n\n\u201cThe truth is Hunter\u2019s father helped him when he was struggling financially due to his addiction and could not secure credit to finance a truck,\u201d Lowell said. \u201cWhen Hunter was able to, he paid his father back and took over the payments himself.\u201d\n\nIn June 2018, Joe Biden and Hunter Biden both went to Bayshore Ford Truck Sales near Wilmington to purchase the vehicle, according to Jim Keen, a now-retired salesman who did the deal when he worked there. The truck was bought by Joe Biden at a purchase price of around $67,000, he said. Although the vehicle was meant for Hunter, his credit \u201cwasn\u2019t worth spit,\u201d Keen said, so he needed his father to sign for the financing. Hunter Biden also traded in two other vehicles as part of the exchange, Keen said. A document about the deal that was on a laptop that Hunter Biden abandoned at a computer repair shop also refers to the sale of two vehicles before this truck was purchased. \n\nJoe Biden spent more than two hours in the dealership that day, Keen said, chatting with people and posing for photos. They include a shot of Keen shaking hands with Hunter Biden in front of the truck, as Joe Biden looks on, wearing his signature aviator sunglasses. \n\nAfter about 18 months, Joe Biden\u2019s team contacted the dealership and asked if they would buy the truck back, according to Keen. \u201cJoe Biden didn\u2019t want it,\u201d he said. The dealership agreed, even though the truck was in bad condition, with considerable mileage and cosmetic damage and it needed extensive repairs. It was later resold, Keen said.\n\nMessages on Hunter Biden\u2019s abandoned laptop also support details about the transaction and the monthly repayments from Hunter Biden to his father.\n\nCongressional Republicans have previously published records that show how starting in August 2017 entities tied to a Chinese oil company paid money to Hunter Biden\u2019s Washington law firm, Owasco PC. \n\nThe payments from CEFC China Energy, over more than a year, were attributed to legal and advisory work and totaled more than $4.7 million, the reports have shown. Now dissolved, CEFC was run by a since-disappeared oil tycoon who befriended Hunter Biden as he sought to make investments in the U.S. including through a joint venture they formed but which never got any funding. \n\nThe new documents were released as House Republican leaders are moving toward a vote on formalizing an impeachment probe into President Biden. The Oversight panel has been looking into whether he made money from or was compromised by his family\u2019s business dealings. While President Biden occasionally met with his son\u2019s clients, their probe has found no evidence that President Biden profited from the arrangements. \n\nBut the inquiry has broken through to the public. Nearly 70% of voters believe that President Biden did something either illegal or unethical related to his son\u2019s business dealings, according to a recent AP-NORC poll. The survey found that 40% of Democrats think the president did something either illegal or unethical.",
+    "name": "article03_wsj.json",
+    "annotations": [
+        {
+            "technique": "politicalPolarisation",
+            "reasoning": "The quote attempts to increase political polarisation by making an accusation against Joe Biden, suggesting he was involved in his son's business dealings.",
+            "quote": "The committee\u2019s chairman, Rep. James Comer (R., Ky,) said the payments \u201care now part of a pattern revealing Joe Biden knew about, participated in, and benefited from his family\u2019s influence peddling schemes.",
+            "rating": 4
+        },
+        {
+            "technique": "politicalPolarisation",
+            "reasoning": "The quote attempts to increase political polarisation by accusing the committee chairman of distorting facts to make a case against Joe Biden.",
+            "quote": "\u201cIf Chairman Comer had any actual evidence of wrongdoing by President Biden, he would not repeatedly resort to distorting the facts.\u201d",
+            "rating": 4
+        },
+        {
+            "technique": "politicalPolarisation",
+            "reasoning": "The quote attempts to increase political polarisation by suggesting that the investigation into Joe Biden and his family is a sham.",
+            "quote": "Hunter Biden\u2019s lawyer, Abbe Lowell, said Comer was \u201creheating what is old as new to try to revive his sham of an investigation\u201d into the president and his family.",
+            "rating": 4
+        },
+        {
+            "technique": "nonSequitur",
+            "reasoning": "The statement about Hunter Biden's firearm purchase and federal prosecution on felony gun charges does not logically follow from the previous discussion about his financial transactions with his father.",
+            "quote": "In those same autumn months five years ago, Hunter Biden bought a firearm in Delaware, a purchase now at the center of his federal prosecution on felony gun charges. Prosecutors have alleged that the younger Biden lied about his drug use on a federal form he was required to complete as part of that purchase. He has publicly said he struggled with addiction to crack cocaine and alcohol around that time.",
+            "rating": 4
+        },
+        {
+            "technique": "discredtingSources",
+            "reasoning": "The quote discredits the credibility of the House Committee on Oversight and Accountability by suggesting that the chairman is distorting facts to make a case against President Biden.",
+            "quote": "Rep. Jamie Raskin (D., Md.), the ranking member of the committee, said they showed no such thing. \u201cAs a private citizen, Joe Biden made car payments for his son, who paid him back,\u201d Raskin said. \u201cIf Chairman Comer had any actual evidence of wrongdoing by President Biden, he would not repeatedly resort to distorting the facts.\u201d",
+            "rating": 4
+        },
+        {
+            "technique": "fearMongering",
+            "reasoning": "The quote is trying to create fear and alarm about the potential impeachment of President Biden, suggesting that his presidency is in jeopardy due to his son's business dealings.",
+            "quote": "The new documents were released as House Republican leaders are moving toward a vote on formalizing an impeachment probe into President Biden. The Oversight panel has been looking into whether he made money from or was compromised by his family\u2019s business dealings.",
+            "rating": 4
+        },
+        {
+            "technique": "falseDichotomy",
+            "reasoning": "The quote presents a false dichotomy by suggesting that the money transfers either link President Biden to his son's business activity in China or merely show Hunter Biden reimbursing his father for some payments.",
+            "quote": "While House Republicans said the money transfers link President Biden, who wasn\u2019t in office at the time, to his son\u2019s business activity in China, Democrats said they merely showed Hunter Biden reimbursing his father for some payments his father was making on a 2018 Ford F-150 Raptor that Hunter Biden was using.",
+            "rating": 4
+        },
+        {
+            "technique": "falseDichotomy",
+            "reasoning": "The quote presents a false dichotomy by suggesting that the payments either reveal Joe Biden's participation in his family's influence peddling schemes or they simply show a private citizen making car payments for his son.",
+            "quote": "The committee\u2019s chairman, Rep. James Comer (R., Ky,) said the payments \u201care now part of a pattern revealing Joe Biden knew about, participated in, and benefited from his family\u2019s influence peddling schemes.\u201d Rep. Jamie Raskin (D., Md.), the ranking member of the committee, said they showed no such thing. \u201cAs a private citizen, Joe Biden made car payments for his son, who paid him back,\u201d Raskin said.",
+            "rating": 4
+        },
+        {
+            "technique": "emotion",
+            "reasoning": "The quote appeals to the emotions of sympathy and empathy by portraying Hunter Biden as a struggling individual who needed financial help from his father due to his addiction.",
+            "quote": "The truth is Hunter\u2019s father helped him when he was struggling financially due to his addiction and could not secure credit to finance a truck,\u201d Lowell said. \u201cWhen Hunter was able to, he paid his father back and took over the payments himself.",
+            "rating": 4
+        },
+        {
+            "technique": "emotion",
+            "reasoning": "The quote appeals to the emotions of anger and distrust by suggesting that President Biden was involved in and benefited from his family's alleged influence peddling schemes.",
+            "quote": "he committee\u2019s chairman, Rep. James Comer (R., Ky,) said the payments \u201care now part of a pattern revealing Joe Biden knew about, participated in, and benefited from his family\u2019s influence peddling schemes.",
+            "rating": 4
+        },
+        {
+            "technique": "emotion",
+            "reasoning": "The quote appeals to the emotions of disbelief and shock by revealing that a large percentage of voters believe that President Biden did something either illegal or unethical related to his son\u2019s business dealings.",
+            "quote": "ut the inquiry has broken through to the public. Nearly 70% of voters believe that President Biden did something either illegal or unethical related to his son\u2019s business dealings, according to a recent AP-NORC poll. The survey found that 40% of Democrats think the president did something either illegal or unethical",
+            "rating": 4
+        }
+    ]
+}

@@ -1,14 +1,43 @@
 import React, { useState, useEffect } from "react";
-import article1URL from '../Data/article1.txt'; 
 import Highlighter from "react-highlight-words";
 import 'react-tippy/dist/tippy.css';
 import { questions } from "../Data/articlequestions";
 import RenderHighlight from "../Data/renderhighlight";
+import articleJSON from "../Data/unique_quotes_a1.json"
 
-const highlights = ["However, the law might still not be on the side of the executive branch"];
+const createQuoteReasoningMap = (annotations) => {
+    const map = {};
+    annotations.forEach(annotation => {
+      if (!map[annotation.quote]) {
+        map[annotation.quote] = [];
+      }
+      // Push the entire annotation, not just the reasoning
+      map[annotation.quote].push({
+        reasoning: annotation.reasoning,
+        technique: annotation.technique,
+        rating: annotation.rating
+      });
+    });
+    return map;
+  };
+  
 
 const Article_one = ({ answers, setAnswers, navigateTo }) => {
-  const [articleContent, setArticleContent] = useState("");
+
+  const quoteReasoningMap = createQuoteReasoningMap(articleJSON.annotations);
+
+  console.log(quoteReasoningMap)
+
+  const getTooltipText = (quote) => {
+    const annotations = quoteReasoningMap[quote];
+    if (!annotations) {
+      return { title: "No techniques provided", content: "No reasoning provided" };
+    }
+    const title = annotations.map(a => `${a.technique}`).join(' | ');
+    const content = annotations.map(a => a.reasoning).join('\n\n---\n\n');
+    return { title, content };
+  };
+  
   const [isComplete, setIsComplete] = useState(false);
 
   const handleOptionChange = (questionId, answer) => {
@@ -28,14 +57,6 @@ const Article_one = ({ answers, setAnswers, navigateTo }) => {
     setIsComplete(allAnswered);
   }, [answers, questions]);
 
-
-    useEffect(() => {
-        // Fetch the content of the text file
-        fetch(article1URL)
-            .then(response => response.text())
-            .then(text => setArticleContent(text))
-            .catch(error => console.error('Error fetching text file:', error));
-    }, []);
 
     const renderQuestion = (question) => (
       <div key={question.id} style={{margin: 10}}>
@@ -61,16 +82,29 @@ const Article_one = ({ answers, setAnswers, navigateTo }) => {
 
   return (
     <div style={styles.articleContainer}>
-        <div style={{ marginBottom: '60px' }}> 
-            <p style={styles.articleTitle}>Article 1</p>
-            <Highlighter
-                highlightClassName="YourHighlightClass"
-                searchWords={highlights}
-                autoEscape={true}
-                textToHighlight={articleContent}
-                highlightTag={(props) => <RenderHighlight tooltipText="Custom Tooltip Text" {...props} />}
-                style={styles.preformattedStyle}
-            />
+        <div style={{ marginBottom: '60px' }}>
+        <img src={articleJSON.logo} style={{marginLeft: "40%", marginTop: 15}}/> 
+        <p style={{...styles.articleTitle, marginLeft:"26%", fontSize: 26}}> Source: {articleJSON.source}</p>
+        <p style={styles.articleTitle}>{articleJSON.headline}</p>
+        <Highlighter
+          highlightClassName="YourHighlightClass"
+          searchWords={Object.keys(quoteReasoningMap)}
+          autoEscape={true}
+          textToHighlight={articleJSON.text}
+          highlightTag={({ children, highlightIndex }) => {
+            const quote = children.toString();
+            const tooltipData = getTooltipText(quote);
+            return (
+              <RenderHighlight 
+                tooltipTitle={tooltipData.title}
+                tooltipText={tooltipData.content}
+              >
+                {children}
+              </RenderHighlight>
+            );
+          }}          
+          style={styles.preformattedStyle}
+        />
         </div> 
         {questions.map(renderQuestion)}
         <div style={styles.buttonContainer}>
@@ -94,8 +128,8 @@ const styles = {
         lineHeight: 1.4,
     },
     articleContainer: {
-        marginRight: 190,
-        marginLeft: 190,
+        marginRight: "25%",
+        marginLeft: "25%",
         paddingBottom: 10,
         display: 'flex', // Added for flex layout
         flexDirection: 'column', // Stack items vertically
@@ -103,11 +137,11 @@ const styles = {
 
     },
     articleTitle: {
-        fontSize: 18,
+        fontSize: 34,
         fontWeight: 'bold',
-        marginBottom: 5,
+        marginBottom: 10,
         fontFamily: 'Arial',
-        marginTop: 200,
+        marginTop: 25,
     },
     buttonContainer: {
 

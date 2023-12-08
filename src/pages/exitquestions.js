@@ -1,11 +1,17 @@
-import React from 'react';
+import React, {useState, useEffect}from 'react';
+import { questions } from "../Data/exitQuestions";
 import supabase from '../supabase';
 
 const ExitQuestions = ({ answers, setAnswers, navigateTo, presurveyanswers, articleoneanswers, articletwoanswers, articlethreeanswers, articlefouranswers}) => {
+    const [isComplete, setIsComplete] = useState(false);
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
     const submit = async () => {
         const {data, error} = await supabase.from('responses').insert({
-          exitquestions: {},
+          exitquestions: answers,
           preserv: presurveyanswers,
           articleOne: articleoneanswers,
           articleTwo: articletwoanswers,
@@ -20,14 +26,60 @@ const ExitQuestions = ({ answers, setAnswers, navigateTo, presurveyanswers, arti
         navigateTo('finished'); 
     };
 
+    const handleOptionChange = (questionId, answer) => {
+      setAnswers(prevAnswers => ({
+        ...prevAnswers,
+        [questionId]: answer
+      }));
+    };
+  
+    useEffect(() => {
+      // Check if all questions have been answered
+      const allAnswered = questions.every(question => answers[question.id] !== undefined);
+      setIsComplete(allAnswered);
+    }, [answers, questions]);
+
+    const renderQuestion = (question) => (
+      <div key={question.id} style={{margin: 10}}>
+          <div style={{ margin: 12 }}>{question.questionText}</div>
+          <form>
+              {question.answerOptions.map((option, index) => (
+                  <div key={index}>
+                      <input
+                          type="radio"
+                          id={`${question.id}-${option}`}
+                          name={`question-${question.id}`}
+                          value={option}
+                          onChange={(e) => handleOptionChange(question.id, e.target.value)}
+                          checked={answers[question.id] === option}
+                          style={{ marginTop: 10, margin: 10 }}
+                      />
+                      <label htmlFor={`${question.id}-${option}`}>{option}</label>
+                  </div>
+              ))}
+          </form>
+      </div>
+  );
+
   return (
     <div style={styles.articleContainer}>
       <h1>Exit Questionnaire</h1>
-      <p>Answer the questions....NOW</p>
-      
-      <div style={styles.buttonContainer}>  
-          <button style={{ ...styles.button, backgroundColor: '#007BFF' }} onClick={handleSubmit}>SUBMIT</button>   
-      </div>
+      <p>Please answer the following questions either True or false:</p>
+      {questions.map(renderQuestion)}
+      <div style={styles.buttonContainer}>
+            <button 
+                style={{ ...styles.button, backgroundColor: isComplete ? '#007BFF' : '#CCCCCC', cursor: isComplete ? "pointer" : "not-allowed" }}
+                onClick={() => {
+                  if (isComplete) {
+                      handleSubmit();
+                      navigateTo('finished');
+                  }
+              }}
+                disabled={!isComplete}
+            >
+                SUBMIT
+            </button>
+        </div>
 
 
     </div>

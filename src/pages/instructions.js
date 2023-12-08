@@ -1,24 +1,31 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import toolImage from "../Data/tool_screenshot.png"
 
 const Instructions = ({navigateTo}) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div style={styles.articleContainer}>
       <h1>Instructions</h1>
       <p>Please read these instructions carefully, as understanding them is important for successfully completing the study. After reading the instructions, you will need to complete a comprehension quiz to confirm that you understood the task.</p>
       
-      <p>The following survey will involve reading and analyzing news articles from various outlets.  After you have read the article you will be asked a few questions about what you read, and will be asked to measure how reliable of a source you believe the article came from.  You may be assisted by a reading tool that looks like this: [figure].  This tool will point out quotes it believes to be propaganda and will explain why along with a rating of how severe the propaganda is (on a scale from 1 to 5 with 1 being slightly propaganda and 5 being extreme).  If you are assisted by the tool you will be asked at the end how useful you found it and if the quotes it highlighted were accurately rated. You will not be able to return to the article after moving on.</p>
-
-      <p>In total, you will read ___ articles and answer ___ questions. It is important to read each story carefully and respond to the questions to the best of your ability</p>
+      <p>The following survey will involve reading and analyzing news articles from various outlets. After you have read the article, you will be asked a few questions about what you read, and will be asked to measure how reliable of a source you believe the article came from. You may be assisted by a reading tool that looks like this:</p>
+      
+      <img src={toolImage} style={styles.imageStyle}/>
+  
+      <p>This tool will point out quotes it believes to be biased or misleading and will explain why. If you are assisted by the tool, you will be asked at the end how useful you found it and if the quotes it highlighted were accurately rated. You will not be able to return to the article after moving on.</p>
+  
+      <p>In total, you will read 4 articles and answer 36 questions. It is important to read each story carefully and respond to the questions to the best of your ability.</p>
     
       <div style={styles.buttonContainer}>
-          <button style={styles.button} onClick={() => navigateTo('preSurvey')}>Previous</button>    
-          <button style={{ ...styles.button, backgroundColor: '#007BFF' }} onClick={() => navigateTo('articleOne')}>Next</button>   
+        <button style={styles.button} onClick={() => navigateTo('preSurvey')}>Previous</button>    
+        <button style={{ ...styles.button, backgroundColor: '#007BFF' }} onClick={() => navigateTo('articleOne')}>START</button>   
       </div>
-
-
     </div>
   );
+  
 };
 
 // Styles
@@ -46,6 +53,12 @@ const styles = {
   },
   buttonContainer: {
       alignSelf: 'center', // Align button to the right
+  },
+  imageStyle: {
+    marginTop: '20px',  // Adjust the top margin
+    marginBottom: '20px', // Adjust the bottom margin
+    border: '1px solid black',
+    width: "80%"
   },
   button: {
     fontSize: '18px', // Set the font size

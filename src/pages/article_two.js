@@ -1,14 +1,41 @@
 import React, { useState, useEffect } from "react";
-import article2URL from '../Data/article2.txt'; 
 import Highlighter from "react-highlight-words";
 import 'react-tippy/dist/tippy.css';
 import { questions } from "../Data/articlequestions";
 import RenderHighlight from "../Data/renderhighlight";
+import articleJSON from "../Data/unique_quotes_a2.json"
 
-const highlights = ["Mr. Trump is a criminal defendant. He is facing four felony charges."];
+const createQuoteReasoningMap = (annotations) => {
+    const map = {};
+    annotations.forEach(annotation => {
+      if (!map[annotation.quote]) {
+        map[annotation.quote] = [];
+      }
+      // Push the entire annotation, not just the reasoning
+      map[annotation.quote].push({
+        reasoning: annotation.reasoning,
+        technique: annotation.technique,
+        rating: annotation.rating
+      });
+    });
+    return map;
+  };
+  
 
 const Article_two = ({ answers, setAnswers, navigateTo }) => {
-  const [articleContent, setArticleContent] = useState("");
+
+  const quoteReasoningMap = createQuoteReasoningMap(articleJSON.annotations);
+
+  const getTooltipText = (quote) => {
+    const annotations = quoteReasoningMap[quote];
+    if (!annotations) {
+      return { title: "No techniques provided", content: "No reasoning provided" };
+    }
+    const title = annotations.map(a => `${a.technique}`).join(' | ');
+    const content = annotations.map(a => a.reasoning).join('\n\n---\n\n');
+    return { title, content };
+  };
+  
   const [isComplete, setIsComplete] = useState(false);
 
   const handleOptionChange = (questionId, answer) => {
@@ -29,48 +56,53 @@ const Article_two = ({ answers, setAnswers, navigateTo }) => {
   }, [answers, questions]);
 
 
-    useEffect(() => {
-        // Fetch the content of the text file
-        fetch(article2URL)
-            .then(response => response.text())
-            .then(text => setArticleContent(text))
-            .catch(error => console.error('Error fetching text file:', error));
-    }, []);
-
-    const renderQuestion = (question) => (
-      <div key={question.id} style={{margin: 10}}>
-          <div style={{ margin: 12 }}>{question.questionText}</div>
-          <form>
-              {question.answerOptions.map((option, index) => (
-                  <div key={index}>
-                      <input
-                          type="radio"
-                          id={`${question.id}-${option}`}
-                          name={`question-${question.id}`}
-                          value={option}
-                          onChange={(e) => handleOptionChange(question.id, e.target.value)}
-                          checked={answers[question.id] === option}
-                          style={{ marginTop: 10, margin: 10 }}
-                      />
-                      <label htmlFor={`${question.id}-${option}`}>{option}</label>
-                  </div>
-              ))}
-          </form>
-      </div>
-  );
+  const renderQuestion = (question) => (
+    <div key={question.id} style={{margin: 10}}>
+        <div style={{ margin: 12 }}>{question.questionText}</div>
+        <form>
+            {question.answerOptions.map((option, index) => (
+                <div key={index}>
+                    <input
+                        type="radio"
+                        id={`${question.id}-${option}`}
+                        name={`question-${question.id}`}
+                        value={option}
+                        onChange={(e) => handleOptionChange(question.id, e.target.value)}
+                        checked={answers[question.id] === option}
+                        style={{ marginTop: 10, margin: 10 }}
+                    />
+                    <label htmlFor={`${question.id}-${option}`}>{option}</label>
+                </div>
+            ))}
+        </form>
+    </div>
+);
 
   return (
     <div style={styles.articleContainer}>
-        <div style={{ marginBottom: '60px' }}> 
-            <p style={styles.articleTitle}>Article 2</p>
-            <Highlighter
-                highlightClassName="YourHighlightClass"
-                searchWords={highlights}
-                autoEscape={true}
-                textToHighlight={articleContent}
-                highlightTag={(props) => <RenderHighlight tooltipText="Custom Tooltip Text" {...props} />}
-                style={styles.preformattedStyle}
-            />
+        <div style={{ marginBottom: '60px' }}>
+        <img src={articleJSON.logo} style={{marginTop: 15, width: "100%", height: "auto"}}/> 
+        <p style={{...styles.articleTitle, marginLeft:"30%", fontSize: 35}}> Source: {articleJSON.source}</p>
+        <p style={styles.articleTitle}>{articleJSON.headline}</p>
+        <Highlighter
+          highlightClassName="YourHighlightClass"
+          searchWords={Object.keys(quoteReasoningMap)}
+          autoEscape={true}
+          textToHighlight={articleJSON.text}
+          highlightTag={({ children, highlightIndex }) => {
+            const quote = children.toString();
+            const tooltipData = getTooltipText(quote);
+            return (
+              <RenderHighlight 
+                tooltipTitle={tooltipData.title}
+                tooltipText={tooltipData.content}
+              >
+                {children}
+              </RenderHighlight>
+            );
+          }}          
+          style={styles.preformattedStyle}
+        />
         </div> 
         {questions.map(renderQuestion)}
         <div style={styles.buttonContainer}>
@@ -84,6 +116,7 @@ const Article_two = ({ answers, setAnswers, navigateTo }) => {
         </div>
     </div>
 );
+
 };
 
 const styles = {
@@ -93,22 +126,23 @@ const styles = {
         lineHeight: 1.4,
     },
     articleContainer: {
-        marginRight: 180,
-        marginLeft: 180,
+        marginRight: "25%",
+        marginLeft: "25%",
         paddingBottom: 10,
         display: 'flex', // Added for flex layout
         flexDirection: 'column', // Stack items vertically
         justifyContent: 'space-between', // Space between items
-        //backgroundColor: 'red',
+
     },
     articleTitle: {
-        fontSize: 18,
+        fontSize: 34,
         fontWeight: 'bold',
-        marginBottom: 5,
+        marginBottom: 10,
         fontFamily: 'Arial',
-        marginTop: 200,
+        marginTop: 25,
     },
     buttonContainer: {
+
         alignSelf: 'center', // Align button to the right
     },
     button: {
