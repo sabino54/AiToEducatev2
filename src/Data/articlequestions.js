@@ -1,50 +1,50 @@
 export const questions = [
   {
-      questionText: '1. The quotes the tool highlighted were biased or misleading',
+      questionText: '1. Do you believe the article presented was biased or misleading?',
       answerOptions: [
-        'Strongly Disagree: I firmly believe that the highlighted quotes were not biased or misleading.',
-        'Disagree: I tend to think that the highlighted quotes were not biased or misleading.',
-        'Neutral: I am unsure or have no opinion on whether the highlighted quotes were biased or misleading.',
-        'Agree: I lean towards believing that the highlighted quotes were biased or misleading.',
-        'Strongly Agree: I am completely convinced that the highlighted quotes were biased or misleading.'
+        'Strongly Disagree: I firmly believe that the article was not biased or misleading.',
+        'Disagree: I tend to think that the article was not biased or misleading.',
+        'Neutral: I am unsure or have no opinion on whether the article was biased or misleading.',
+        'Agree: I lean towards believing that the article was biased or misleading.',
+        'Strongly Agree: I am completely convinced that the article was biased or misleading.'
       ],
       id: 1,
-    },
-    {
-      questionText: '2. The ratings the tool gave the selected quotes were accurate',
+  },
+  {
+      questionText: '2. How accurately does the article represent the issues it discusses?',
       answerOptions: [
-        'Strongly Disagree: I completely disagree that the ratings given to the quotes were accurate.',
-        'Disagree: I tend to believe that the ratings given to the quotes were not accurate.',
-        'Neutral: I am unsure or have no opinion about the accuracy of the ratings for the quotes.',
-        'Agree: I generally agree that the ratings given to the quotes were accurate.',
-        'Strongly Agree: I wholeheartedly believe that the ratings for the quotes were completely accurate.'
+        'Strongly Disagree: I completely disagree with the representation of issues in the article.',
+        'Disagree: I tend to believe that the representation of issues in the article was not accurate.',
+        'Neutral: I am unsure or have no opinion about the accuracy of the representation of issues in the article.',
+        'Agree: I generally agree with the representation of issues in the article.',
+        'Strongly Agree: I wholeheartedly believe that the representation of issues in the article was completely accurate.'
       ],
       id: 2,
-    },
-    {
-      questionText: '3. The reasons the tool gave for how the quotes were biased or misleading were accurate',
+  },
+  {
+      questionText: '3. Do you agree with the reasoning and arguments presented in the article?',
       answerOptions: [
-        'Strongly Disagree: I completely disagree with the reasons provided by the tool for the quotes being biased or misleading.',
-        'Disagree: I tend to believe that the reasons given by the tool for the quotes being biased or misleading were not accurate.',
-        'Neutral: I am unsure or have no opinion about the accuracy of the reasons provided by the tool for the quotes being biased or misleading.',
-        'Agree: I generally agree with the reasons given by the tool for the quotes being biased or misleading.',
-        'Strongly Agree: I wholeheartedly believe that the reasons provided by the tool for the quotes being biased or misleading were completely accurate.'
+        'Strongly Disagree: I completely disagree with the reasoning and arguments presented in the article.',
+        'Disagree: I tend to believe that the reasoning and arguments in the article were not accurate or convincing.',
+        'Neutral: I am unsure or have no opinion about the reasoning and arguments presented in the article.',
+        'Agree: I generally agree with the reasoning and arguments presented in the article.',
+        'Strongly Agree: I wholeheartedly believe that the reasoning and arguments in the article were sound and convincing.'
       ],
       id: 3,
-    },
-    {
-      questionText: '4. The tool was helpful in identifying if articles contained biased or misleading content',
+  },
+  {
+      questionText: '4. Was the article helpful in providing a clear and comprehensive understanding of the topic?',
       answerOptions: [
-        'Strongly Disagree: I completely disagree that the tool was helpful in identifying if articles contained biased or misleading content.',
-        'Disagree: I tend to believe that the tool was not helpful in identifying if articles contained biased or misleading content.',
-        'Neutral: I am unsure or have no opinion about the helpfulness of the tool in identifying if articles contained biased or misleading content.',
-        'Agree: I generally agree that the tool was helpful in identifying if articles contained biased or misleading content.',
-        'Strongly Agree: I wholeheartedly believe that the tool was extremely helpful in identifying if articles contained biased or misleading content.'
+        'Strongly Disagree: I completely disagree that the article was helpful in providing a clear and comprehensive understanding of the topic.',
+        'Disagree: I tend to believe that the article was not helpful in providing a clear and comprehensive understanding of the topic.',
+        'Neutral: I am unsure or have no opinion about the helpfulness of the article in providing a clear and comprehensive understanding of the topic.',
+        'Agree: I generally agree that the article was helpful in providing a clear and comprehensive understanding of the topic.',
+        'Strongly Agree: I wholeheartedly believe that the article was extremely helpful in providing a clear and comprehensive understanding of the topic.'
       ],
       id: 4,
-    },
-    {
-      questionText: '5. How much do you trust this source?',
+  },
+  {
+      questionText: '5. How much do you trust the source of the article?',
       answerOptions: [
         'Not at all trustworthy: I have strong reasons to distrust this source',
         'Slightly trustworthy: I have some reservations about trusting this source',
@@ -53,6 +53,5 @@ export const questions = [
         'Completely trustworthy: I fully trust this source without any reservations'
       ],
       id: 5,
-    }
-
+  }
 ];

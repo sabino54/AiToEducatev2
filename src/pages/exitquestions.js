@@ -17,6 +17,7 @@ const ExitQuestions = ({ answers, setAnswers, navigateTo, presurveyanswers, arti
           articleTwo: articletwoanswers,
           articleThree: articlethreeanswers,
           articleFour: articlefouranswers,
+          used_tool: false,
         });
         console.log(error)
       }

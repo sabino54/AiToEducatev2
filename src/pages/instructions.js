@@ -11,11 +11,9 @@ const Instructions = ({navigateTo}) => {
       <h1>Instructions</h1>
       <p>Please read these instructions carefully, as understanding them is important for successfully completing the study. After reading the instructions, you will need to complete a comprehension quiz to confirm that you understood the task.</p>
       
-      <p>The following survey will involve reading and analyzing news articles from various outlets. After you have read the article, you will be asked a few questions about what you read, and will be asked to measure how reliable of a source you believe the article came from. You may be assisted by a reading tool that looks like this:</p>
-      
-      <img src={toolImage} style={styles.imageStyle}/>
-  
-      <p>This tool will point out quotes it believes to be biased or misleading and will explain why. If you are assisted by the tool, you will be asked at the end how useful you found it and if the quotes it highlighted were accurately rated. You will not be able to return to the article after moving on.</p>
+      <p>The following survey will involve reading and analyzing news articles from various outlets. After you have read the article, you will be asked a few questions about what you read, and will be asked to measure how reliable of a source you believe the article came from.</p>
+
+      <p>You will not be able to return to the article after moving on.</p>
   
       <p>In total, you will read 4 articles and answer 28 questions. It is important to read each story carefully and respond to the questions to the best of your ability.</p>
     

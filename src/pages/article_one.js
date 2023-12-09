@@ -86,25 +86,7 @@ const Article_one = ({ answers, setAnswers, navigateTo }) => {
         <img src={articleJSON.logo} style={{marginLeft: "40%", marginTop: 15}}/> 
         <p style={{...styles.articleTitle, marginLeft:"26%", fontSize: 26}}> Source: {articleJSON.source}</p>
         <p style={styles.articleTitle}>{articleJSON.headline}</p>
-        <Highlighter
-          highlightClassName="YourHighlightClass"
-          searchWords={Object.keys(quoteReasoningMap)}
-          autoEscape={true}
-          textToHighlight={articleJSON.text}
-          highlightTag={({ children, highlightIndex }) => {
-            const quote = children.toString();
-            const tooltipData = getTooltipText(quote);
-            return (
-              <RenderHighlight 
-                tooltipTitle={tooltipData.title}
-                tooltipText={tooltipData.content}
-              >
-                {children}
-              </RenderHighlight>
-            );
-          }}          
-          style={styles.preformattedStyle}
-        />
+        <p style={styles.preformattedStyle}>{articleJSON.text}</p>
         </div> 
         {questions.map(renderQuestion)}
         <div style={styles.buttonContainer}>
