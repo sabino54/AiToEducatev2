@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/AiToEducatev2/static/css/main.fe9abeaf.css",
-    "main.js": "/AiToEducatev2/static/js/main.d6a5d0e9.js",
+    "main.js": "/AiToEducatev2/static/js/main.b327be49.js",
     "static/js/787.b07a3d37.chunk.js": "/AiToEducatev2/static/js/787.b07a3d37.chunk.js",
     "static/media/tool_screenshot.png": "/AiToEducatev2/static/media/tool_screenshot.9692c3de790dde286241.png",
     "index.html": "/AiToEducatev2/index.html",
     "main.fe9abeaf.css.map": "/AiToEducatev2/static/css/main.fe9abeaf.css.map",
-    "main.d6a5d0e9.js.map": "/AiToEducatev2/static/js/main.d6a5d0e9.js.map",
+    "main.b327be49.js.map": "/AiToEducatev2/static/js/main.b327be49.js.map",
     "787.b07a3d37.chunk.js.map": "/AiToEducatev2/static/js/787.b07a3d37.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fe9abeaf.css",
-    "static/js/main.d6a5d0e9.js"
+    "static/js/main.b327be49.js"
   ]
 }
