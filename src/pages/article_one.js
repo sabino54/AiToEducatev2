@@ -1,52 +1,20 @@
 import React, { useState, useEffect } from "react";
-import Highlighter from "react-highlight-words";
 import 'react-tippy/dist/tippy.css';
 import { questions } from "../Data/articlequestions";
-import RenderHighlight from "../Data/renderhighlight";
-import articleJSON from "../Data/unique_quotes_a1.json"
 
-const createQuoteReasoningMap = (annotations) => {
-    const map = {};
-    annotations.forEach(annotation => {
-      if (!map[annotation.quote]) {
-        map[annotation.quote] = [];
-      }
-      // Push the entire annotation, not just the reasoning
-      map[annotation.quote].push({
-        reasoning: annotation.reasoning,
-        technique: annotation.technique,
-        rating: annotation.rating
-      });
-    });
-    return map;
-  };
-  
-
-const Article_one = ({ answers, setAnswers, navigateTo }) => {
-
-  const quoteReasoningMap = createQuoteReasoningMap(articleJSON.annotations);
-
-  console.log(quoteReasoningMap)
-
-  const getTooltipText = (quote) => {
-    const annotations = quoteReasoningMap[quote];
-    if (!annotations) {
-      return { title: "No techniques provided", content: "No reasoning provided" };
-    }
-    const title = annotations.map(a => `${a.technique}`).join(' | ');
-    const content = annotations.map(a => a.reasoning).join('\n\n---\n\n');
-    return { title, content };
-  };
+const Article_one = ({ answers, setAnswers, navigateTo, articleJSON }) => {
   
   const [isComplete, setIsComplete] = useState(false);
 
   const handleOptionChange = (questionId, answer) => {
     setAnswers(prevAnswers => ({
       ...prevAnswers,
-      [questionId]: answer
+      [questionId]: answer,
+      text: articleJSON.headline,
     }));
-  };
 
+  };
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -56,7 +24,6 @@ const Article_one = ({ answers, setAnswers, navigateTo }) => {
     const allAnswered = questions.every(question => answers[question.id] !== undefined);
     setIsComplete(allAnswered);
   }, [answers, questions]);
-
 
     const renderQuestion = (question) => (
       <div key={question.id} style={{margin: 10}}>
@@ -83,8 +50,10 @@ const Article_one = ({ answers, setAnswers, navigateTo }) => {
   return (
     <div style={styles.articleContainer}>
         <div style={{ marginBottom: '60px' }}>
-        <img src={articleJSON.logo} style={{marginLeft: "40%", marginTop: 15}}/> 
-        <p style={{...styles.articleTitle, marginLeft:"26%", fontSize: 26}}> Source: {articleJSON.source}</p>
+        <div style={styles.logoContainer}>
+            <img src={articleJSON.logo} alt="Logo" style={styles.logo} />
+        </div>
+        <p style={styles.sourceTextContainer}>Source: {articleJSON.source}</p>
         <p style={styles.articleTitle}>{articleJSON.headline}</p>
         <p style={styles.preformattedStyle}>{articleJSON.text}</p>
         </div> 
@@ -144,7 +113,22 @@ const styles = {
         boxShadow: 'none', // Removes any shadow effect
         backgroundImage: 'none', // Removes any gradient background
         marginTop: 18,
-    }
+    },
+    logoContainer: {
+      textAlign: 'center', // Centers the content
+      padding: '10px', // Adds some space around the logo
+  },
+  logo: {
+      maxWidth: '100%', // Ensures the logo is not wider than its container
+      maxHeight: '150px', // Sets a maximum height for the logo
+      height: 'auto', // Keeps the aspect ratio of the logo
+  },
+  sourceTextContainer: {
+    textAlign: 'center', // Centers the content
+    padding: '10px', // Adds some space around the text
+    fontSize: 26, // Sets the font size
+    fontWeight: 'bold',
+},
 };
 
 export default Article_one;
